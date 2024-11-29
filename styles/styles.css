@@ -1,0 +1,52 @@
+/* Apply flexbox to the body to center content */
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Center the container */
+.container {
+    margin-top: -10rem;
+    text-align: center; /* Center the text inside the container */
+}
+
+/* Styles for input wrapper */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Limit the maximum width of the input */
+    margin: 10px auto; /* Center the input-wrapper horizontally */
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%; /* Ensure the input takes up the full width of the wrapper */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: none;
+}
+
+/* Placeholder label styling */
+label.hint {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: gray;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* Hide the placeholder when input is focused or filled */
+input[type="text"]:focus + label.hint,
+input[type="text"]:not(:placeholder-shown) + label.hint {
+    opacity: 0;
+    visibility: hidden;
+}

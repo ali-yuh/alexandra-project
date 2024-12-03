@@ -1,108 +1,9 @@
-/* Reset some default styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* general body styling */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    padding-top: 60px; /* Adjusted for navbar height */
-}
-
-/* fixed navigation bar */
-nav {
-    background-color: #333;
-    color: white;
-    position: fixed; /* Fixed at the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Make sure it stays above other content */
-    padding: 0 50px; /* Padding for navbar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 60px; /* Adjusted navbar height */
-}
-
-/* general nav menu styling */
-.nav-menu {
-    list-style: none;
     display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    align-items: center; /* Vertical alignment */
-}
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center-align content horizontally */
+  }
 
-/* navigation item */
-.nav-item {
-    position: relative;
-}
-
-/* link styling */
-.nav-item a {
-    display: block;
-    padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    background-color: #333;
-    border-radius: 0; /* Removed rounded corners */
-    transition: background-color 0.3s ease;
-}
-
-.nav-item a:hover {
-    background-color: #444;
-}
-
-/* dropdown menu styling */
-.dropdown-menu {
-    display: none; /* Hide by default */
-    position: absolute;
-    top: 50px; /* Adjusted to move the dropdown higher */
-    left: 0;
-    background-color: #333;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    margin-top: 5px;
-    list-style: none;
-    z-index: -1; /* Move dropdown behind the navbar */
-    min-width: 180px; /* Set a minimum width */
-    max-width: 300px; /* Prevent the dropdown from becoming too wide */
-    overflow: hidden; /* Prevent content from spilling out */
-}
-
-
-/* dropdown items */
-.dropdown-menu li {
-    margin: 0;
-}
-
-.dropdown-menu a {
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 0;
-}
-
-.dropdown-menu a:hover {
-    background-color: #444;
-}
-
-/* Show dropdown when hovering over the parent nav item and the dropdown itself */
-.nav-item:hover .dropdown-menu, .dropdown-menu:hover {
-    display: block;
-}
-
-/* Prevent the dropdown from going off-screen */
-.nav-item:hover .dropdown-menu {
-    left: 0;
-    right: auto;
-    max-width: 100vw; /* Limit dropdown width to the viewport */
-}
 
 /* greyed-out background overlay */
 .overlay {
@@ -111,11 +12,15 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent black */
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center; /* center vertically */
-    z-index: 1000; /* Ensure it’s above other content */
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    z-index: 1000;
+    /* Ensure it’s above other content */
 }
 
 /* hide the overlay by default */
@@ -156,4 +61,10 @@ button:hover {
 
 button:active {
     transform: scale(1);
+}
+
+.intro {
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
 }

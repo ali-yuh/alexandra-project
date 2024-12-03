@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>alli's digital safe</title>
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/styles2.css">
+    <link rel="stylesheet" href="styles/giftbox.css">
 </head>
 <body>
     <nav>
@@ -13,27 +15,68 @@
                 <a href="#home">home</a>
             </li>
             <li class="right nav-item dropdown">
-                <a href="#" class="dropdown-toggle">memories</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#location1">location 1</a></li>
-                    <li><a href="#location2">location 2</a></li>
-                    <li><a href="#location3">location 3</a></li>
-                </ul>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">pages</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <a href="memories.html">Link 1</a>
+                    <a href="memories.html">Link 2</a>
+                    <a href="memories.html">Link 3</a>
+                    </div>
+                    </div>
             </li>
         </ul>
     </nav>
+
+    <div class="intro">
+        <br>
+        <h2>
+            you're the real alexandra!? 
+            <br>
+            well i guess you'll have to be given this gift from santa then...
+        </h2>
+        </div>
+        <br><br><br>
+        
     <!-- greyed-out background overlay -->
     <div id="overlay" class="overlay hidden">
         <!-- popup element -->
         <div class="popup">
-            <p>welcome to the alexandra page! here you'll find...
+            <h2>HAPPY 16TH BIRTHDAY ALLI!!!</h2>
                 <br><br>
-                memories > alli and ali's highlights , ali's fav pix of alli , some funny pics...
+                <p>
+                i coded you a website because i wanted to make a collection of our awesome memories , and eeeverything to do with us !
                 <br>
-            </p>
+                (even though we barely have any photos together...)
+                <br><br>
+                and how ironic i'm doing the one thing i failed in school... digital solutions...
+                <br><br><br>
+                </p>
             <button id="closePopup">okay!</button>
         </div>
     </div>
+
+    <div class="gift-box-container">
+        <div class="gift-box" id="giftBox">
+          <div class="ribbons"></div>
+        </div>
+        <div class="text-box" id="textBox" align="center">
+        <p>
+          merry christmas! 🎉🎉
+          <br>
+          your ugly christmas sweaters for heather day!
+          <br><br>
+          if you wanted to match with me...
+        </p>
+        <div class="image-row">
+            <img src="images/ho1.jpg" class="hos">
+            <img src="images/ho3.jpg" class="hos">
+          </div>
+          <p>
+            or if you wanna go solo...
+          <img src="images/idoitforthehos.png" class="ho">
+          </p>
+        </div>
+      </div>
 
     <script src="script/script.js"></script> <!-- link to external script -->
 </body>

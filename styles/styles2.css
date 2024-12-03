@@ -2,8 +2,7 @@ body {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center;    /* Center-align content horizontally */
-  }
-
+}
 
 /* greyed-out background overlay */
 .overlay {
@@ -64,7 +63,7 @@ button:active {
 }
 
 .intro {
-    justify-content: center;
+    align-content: center;
     display: flex;
     flex-direction: column; /* Stack children vertically */
 }

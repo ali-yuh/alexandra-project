@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home!</title>
+    <title>alli's digital safe</title>
+    <link rel="stylesheet" href="styles/styles2.css">
 </head>
 <body>
-    
+    <nav>
+        <ul class="nav-menu">
+            <li class="left nav-item">
+                <a href="#home">home</a>
+            </li>
+            <li class="right nav-item dropdown">
+                <a href="#" class="dropdown-toggle">memories</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#location1">location 1</a></li>
+                    <li><a href="#location2">location 2</a></li>
+                    <li><a href="#location3">location 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- greyed-out background overlay -->
+    <div id="overlay" class="overlay hidden">
+        <!-- popup element -->
+        <div class="popup">
+            <p>welcome to the alexandra page! here you'll find...
+                <br><br>
+                memories > alli and ali's highlights , ali's fav pix of alli , some funny pics...
+                <br>
+            </p>
+            <button id="closePopup">okay!</button>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script> <!-- link to external script -->
 </body>
 </html>

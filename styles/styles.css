@@ -1,52 +1,58 @@
-/* Apply flexbox to the body to center content */
+/* apply flexbox to center content */
 body {
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default margin */
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+    height: 100vh; /* full viewport height */
+    margin: 0; /* remove default margin */
 }
 
-/* Center the container */
+/* center the container */
 .container {
     margin-top: -10rem;
-    text-align: center; /* Center the text inside the container */
+    text-align: center; /* center text inside the container */
 }
 
-/* Styles for input wrapper */
-.input-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 300px; /* Limit the maximum width of the input */
-    margin: 10px auto; /* Center the input-wrapper horizontally */
-}
-
-/* Input field styling */
+/* styled input field (larger size) */
 input[type="text"] {
-    width: 100%; /* Ensure the input takes up the full width of the wrapper */
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* full width of wrapper */
+    max-width: 350px; /* increased width */
+    padding: 15px; /* larger padding */
+    font-size: 18px; /* larger text */
+    border: 1px solid #ccc; /* subtle border */
+    border-radius: 5px; /* rounded corners */
     box-sizing: border-box;
-    background: none;
+    background-color: #f9f9f9; /* light background color */
+    outline: none; /* remove outline on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
 }
 
-/* Placeholder label styling */
-label.hint {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: gray;
-    pointer-events: none;
-    transition: 0.3s ease;
+/* styling when input is focused with green effect */
+input[type="text"]:focus {
+    border-color: #28a745; /* green border on focus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* glowing green effect */
 }
 
-/* Hide the placeholder when input is focused or filled */
-input[type="text"]:focus + label.hint,
-input[type="text"]:not(:placeholder-shown) + label.hint {
-    opacity: 0;
-    visibility: hidden;
+/* styled submit button (medium-dark red) */
+button {
+    padding: 12px 20px; /* padding inside the button */
+    font-size: 16px; /* text size */
+    font-weight: bold; /* bold text */
+    color: white; /* text color */
+    background-color: #cc3333; /* medium-dark red background */
+    border: none; /* remove default border */
+    border-radius: 5px; /* rounded corners */
+    cursor: pointer; /* change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* smooth effect */
+}
+
+/* button hover effect (darker red) */
+button:hover {
+    background-color: #b32424; /* slightly darker red on hover */
+    transform: scale(1.05); /* subtle scale up effect */
+}
+
+/* button active effect */
+button:active {
+    transform: scale(1); /* return to normal scale */
 }
